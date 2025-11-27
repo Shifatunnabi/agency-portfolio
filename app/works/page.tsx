@@ -20,30 +20,81 @@ export const Projects = [
     //   image: "/workImages/iamge.jpg",  keep in pub/workImages folder
     //   description: "add description",
     // }
-    
-     {
-      title: "Directors' Guild",
+    {
+      title: "Travella",
       category: "Website Development",
-      image: "/workImages/dg.jpg",
-      description: "The Bangladeshi Directors' Guild",
+      image: "/workImages/travela.jpg",
+      description: "Find your best fit stay",
+      link: "https://travela.xyz/",
+    },
+    {
+      title: "The Mall BD",
+      category: "Website Development",
+      image: "/workImages/themall.jpg",
+      description: "Looking for the best products? The Mall is here",
+      link: "https://www.themallbd.com/",
+    },
+
+    {
+      title: "Clay Bangladesh",
+      category: "Website Development",
+      image: "/workImages/claybd.png",
+      description: "We craft brand with purpose.",
+      link: "https://www.claybangladesh.com/",
     },
     {
       title: "Sodai",
       category: "Software Development",
       image: "/workImages/sodai.jpg",
       description: "Get your groceries at your doorsteps",
+      link: "https://www.sodai.xyz/",
     },
+
+    {
+      title: "Fowzia Food",
+      category: "Software Development",
+      image: "/workImages/fowzia.png",
+      description: "Get authentic deshi foods and bevarages",
+      link: "https://www.fowzianomzz.com/",
+    },
+
+    {
+      title: "EventGhor",
+      category: "Software Development",
+      image: "/workImages/eventghor.png",
+      description: "Organize your events with us.",
+      link: "https://www.eventghor.com/",
+    },
+
+    {
+      title: "Innovative Kinatix UK",
+      category: "Software Development",
+      image: "/workImages/ikuk.png",
+      description: "Best fit products come from the best",
+      link: "https://www.ikuk.co.uk/",
+    },
+    
+     {
+      title: "Directors' Guild",
+      category: "Website Development",
+      image: "/workImages/dg.jpg",
+      description: "The Bangladeshi Directors' Guild",
+      link: "https://www.directorsguildbd.com/",
+    },
+    
     {
       title: "Planetary Health Academia",
       category: "Marketing",
       image: "/workImages/pha.jpg",
       description: "A hub for groundbreaking research and education.",
+      link: "https://www.planetaryhealthacademia.org/",
     },
     {
       title: "Keerti Creations",
       category: "Website Development",
       image: "/workImages/keerti.png",
       description: "3D Visualization, Mixed Realities & Virtual Realities",
+      link: "https://www.keerticreations.com/",
     },
   ]
 
@@ -122,8 +173,9 @@ export default function WorksPage() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredProjects.map((project, index) => (
+            <Link href={project.link} target="_blank" rel="noopener noreferrer" key={project.title}>
               <motion.div
-                key={project.title}
+                
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -152,8 +204,12 @@ export default function WorksPage() {
                   </CardContent>
                 </Card>
               </motion.div>
+
+            </Link>  
             ))}
           </motion.div>
+
+
         </div>
       </div>
     </div>
