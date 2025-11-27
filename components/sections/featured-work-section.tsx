@@ -55,8 +55,10 @@ export default function FeaturedWorkSection() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {featuredProjects.map((project, index) => (
+
+           <Link href={project.link} target="_blank" rel="noopener noreferrer" key={project.title}>
             <motion.div
-              key={project.title}
+              
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -81,6 +83,8 @@ export default function FeaturedWorkSection() {
                 </CardContent>
               </Card>
             </motion.div>
+
+            </Link> 
           ))}
         </div>
 
