@@ -9,7 +9,6 @@
     "build": "next build",
     "deploy": "next build && gh-pages -d out"
   },
-
   "homepage": "https://shifatunnabi.github.io/agency-portfolio",
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -41,7 +40,7 @@
     "@radix-ui/react-toggle": "1.1.1",
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
-    "@react-three/drei": "latest",
+    "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "latest",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
